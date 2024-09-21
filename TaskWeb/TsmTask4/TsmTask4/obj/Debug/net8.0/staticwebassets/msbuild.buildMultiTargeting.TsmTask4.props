@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\TsmTask4.props" />
+</Project>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeSheet</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="container mt-5">
+
+    <h1 class="text-center">TimeSheet</h1>
+
+    <div class="form-group">
+        <label for="dateValue">Date:</label>
+        <input type="text" class="form-control" id="dateValue" required>
+    </div>
+
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="isOnLeave">
+        <label class="form-check-label" for="isOnLeave">Is On Leave</label>
+    </div>
+
+    <h2>Activities</h2>
+    <div id="activityContainer">
+        <div class="activity form-row mb-2">
+            <div class="col">
+                <input type="text" placeholder="Project" class="form-control project" required>
+            </div>
+            <div class="col">
+                <input type="text" placeholder="Sub Project" class="form-control subProject" required>
+            </div>
+            <div class="col">
+                <input type="text" placeholder="Batch" class="form-control batch" required>
+            </div>
+            <div class="col">
+                <input type="number" placeholder="Hours Needed" class="form-control hoursNeeded" required>
+            </div>
+            <div class="col">
+                <input type="text" placeholder="Activity Description" class="form-control activityDescription" required>
+            </div>
+            <div class="col-auto">
+                <button class="btn btn-danger removeActivity">Remove</button>
+            </div>
+        </div>
+    </div>
+    <button id="addActivity" class="btn btn-primary">Add Activity</button><br><br>
+
+    <button id="saveButton" class="btn btn-success">Save</button>
+    <button id="showActivities" class="btn btn-info">Show All Activities</button>
+
+    <div class="activity-list mt-4" id="activityList"></div>
+
+    <h2>Delete Activity</h2>
+<div class="form-group">
+    <label for="deleteDateId">Date ID:</label>
+    <input type="number" class="form-control" id="deleteDateId" required>
+</div>
+<button id="deleteButton" class="btn btn-danger">Delete</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
